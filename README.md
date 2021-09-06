@@ -24,12 +24,12 @@
 |item_name            |string             |null:false                 |
 |price                |integer            |null:false                 |
 |description          |string             |null:false                 |
-|distination_id       |integer            |null:false                 |
-|status_id            |integer            |null:false                 |
-|category_id          |integer            |null:false                 |
-|shipping_day_id      |integer            |null:false                 |
-|shipping_cost_id     |integer            |null:false                 |
-|user_id              |integer            |null:false,forein_key: true|
+|distination          |integer            |null:false,forein_key: true|
+|status               |integer            |null:false,forein_key: true|
+|category             |integer            |null:false,forein_key: true|
+|shipping_day         |integer            |null:false,forein_key: true|
+|shipping_cost        |integer            |null:false,forein_key: true|
+|user                 |integer            |null:false,forein_key: true|
 
 ### Association
 * belongs_to :user
@@ -40,12 +40,8 @@
 
 |Column               |Type               |Options                    |
 |---------------------|-------------------|---------------------------|
-|family_name          |string             |null:false                 |
-|first_name           |string             |null:false                 |
-|family_name_kana     |string             |null:false                 |
-|first_name_kana      |string             |null:false                 |
-|item_name            |string             |null:false                 |
-|item_id              |integer            |null:false,forein_key: true|
+|user                 |integer            |null:false,forein_key: true|
+|item                 |integer            |null:false,forein_key: true|
 
 ### Association
 * belongs_to :user
