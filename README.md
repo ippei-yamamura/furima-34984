@@ -22,19 +22,18 @@
 |Column               |Type               |Options                    |
 |---------------------|-------------------|---------------------------|
 |item_name            |string             |null:false                 |
-|price                |string             |null:false                 |
-|destination          |string             |null:false                 |
-|status               |string             |null:false                 |
-|category             |string             |null:false                 |
-|shipping_day         |string             |null:false                 |
-|shipping_cost        |string             |null:false                 |
-|item_image           |string             |null:false                 |
+|price                |integer            |null:false                 |
+|description          |string             |null:false                 |
+|distination_id       |integer            |null:false                 |
+|status_id            |integer            |null:false                 |
+|category_id          |integer            |null:false                 |
+|shipping_day_id      |integer            |null:false                 |
+|shipping_cost_id     |integer            |null:false                 |
 |user_id              |integer            |null:false,forein_key: true|
-|item_id              |integer            |null:false,forein_key: true|
 
 ### Association
-* has_many :users
-* has_one :purchases
+* belongs_to :user
+* has_one :purchase
 
 
 ## purchases table
@@ -51,7 +50,7 @@
 ### Association
 * belongs_to :user
 * belongs_to :item
-* has_one :distinations
+* has_one :distination
 
 
 ## distinations table
@@ -62,10 +61,10 @@
 |prefecture           |string             |null:false                 |
 |city                 |string             |null:false                 |
 |address              |string             |null:false                 |
-|bulding_name         |string             |null:false                 |
+|bulding_name         |string             |                           |
 |phone_number         |string             |null:false                 |
 |purchase_id          |integer            |null:false,forein_key: true|
 
 ### Association
-* belongs_to :purchases
+* belongs_to :purchase
 
