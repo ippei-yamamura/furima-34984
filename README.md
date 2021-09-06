@@ -23,13 +23,13 @@
 |---------------------|-------------------|---------------------------|
 |item_name            |string             |null:false                 |
 |price                |integer            |null:false                 |
-|description          |string             |null:false                 |
-|distination          |integer            |null:false,forein_key: true|
-|status               |integer            |null:false,forein_key: true|
-|category             |integer            |null:false,forein_key: true|
-|shipping_day         |integer            |null:false,forein_key: true|
-|shipping_cost        |integer            |null:false,forein_key: true|
-|user                 |integer            |null:false,forein_key: true|
+|description          |text               |null:false                 |
+|distination_id       |integer            |null:false                 |
+|status_id            |integer            |null:false                 |
+|category_id          |integer            |null:false                 |
+|shipping_day_id      |integer            |null:false                 |
+|shipping_cost_id     |integer            |null:false                 |
+|user                 |refrences          |null:false,forein_key: true|
 
 ### Association
 * belongs_to :user
@@ -40,8 +40,8 @@
 
 |Column               |Type               |Options                    |
 |---------------------|-------------------|---------------------------|
-|user                 |integer            |null:false,forein_key: true|
-|item                 |integer            |null:false,forein_key: true|
+|user                 |references         |null:false,forein_key: true|
+|item                 |references         |null:false,forein_key: true|
 
 ### Association
 * belongs_to :user
