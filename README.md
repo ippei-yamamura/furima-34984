@@ -9,7 +9,7 @@
 |birth_day            |date               |null:false                 |
 |family_name          |string             |null:false                 |
 |first_name           |string             |null:false                 |
-|familt_name_kana     |string             |null:false                 |
+|family_name_kana     |string             |null:false                 |
 |first_name_kana      |string             |null:false                 |
 
 ### Association
