@@ -29,7 +29,7 @@
 |category_id          |integer            |null:false                 |
 |shipping_day_id      |integer            |null:false                 |
 |shipping_cost_id     |integer            |null:false                 |
-|user                 |refrences          |null:false,forein_key: true|
+|user                 |references         |null:false,forein_key: true|
 
 ### Association
 * belongs_to :user
