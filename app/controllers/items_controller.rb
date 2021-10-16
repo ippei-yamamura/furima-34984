@@ -6,9 +6,11 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all.order(created_at: :desc)
   end
+
   def new
     @item = Item.new
   end
+
   def create
     @item = Item.new(item_params)
     if @item.save
@@ -17,6 +19,7 @@ class ItemsController < ApplicationController
       render :new
     end
   end
+
   def show
   end
   def edit
@@ -33,7 +36,7 @@ class ItemsController < ApplicationController
       redirect_to root_path
     end
   end
-  
+
   private
   def item_params
     params.require(:item).permit(:item_name, :price, :description, :image, :distination_id, :status_id, :category_id, :shipping_day_id, :shipping_cost_id).merge(user_id: current_user.id)
