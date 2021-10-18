@@ -57,7 +57,7 @@
 |prefecture           |string             |null:false                 |
 |city                 |string             |null:false                 |
 |address              |string             |null:false                 |
-|bulding_name         |string             |                           |
+|building_name        |string             |                           |
 |phone_number         |string             |null:false                 |
 |purchase_id          |integer            |null:false,forein_key: true|
 
