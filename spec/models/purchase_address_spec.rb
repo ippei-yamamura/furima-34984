@@ -90,7 +90,3 @@ RSpec.describe PurchaseAddress, type: :model do
     end
   end
 end
-
-export PAYJP_SECRET_KEY='sk_test_1cde6be8f93ecb4bf4456d57'
-
-export PAYJP_PUBLIC_KEY='pk_test_03c0ca03b0c098b0fdd4ae5c'
