@@ -10,7 +10,11 @@ RSpec.describe PurchaseAddress, type: :model do
 
   describe "商品購入機能" do
     context '商品購入できるとき' do
-      it 'post_codeとdistination_idとcityとhouse_numberとphone_numberとtokenが存在すれば購入できる' do
+      it 'post_codeとdistination_idとcityとbuilding_nameとhouse_numberとphone_numberとtokenが存在すれば購入できる' do
+        expect(@purchase_address).to be_valid
+      end
+      it 'building_nameがなくても登録できる' do
+        @purchase_address.building_name = ''
         expect(@purchase_address).to be_valid
       end
     end
